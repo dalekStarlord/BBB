@@ -1,0 +1,40 @@
+#! otp-deployment.yaml
+# Generated code, do not edit
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: otp
+    namespace: otpp
+    labels:
+        com.docker.compose.project: otpp
+        com.docker.compose.service: otp
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            com.docker.compose.project: otpp
+            com.docker.compose.service: otp
+    strategy:
+        type: Recreate
+    template:
+        metadata:
+            labels:
+                com.docker.compose.project: otpp
+                com.docker.compose.service: otp
+                com.docker.compose.network.default: "true"
+        spec:
+            containers:
+                - name: otp
+                  image: otpp-otp
+                  imagePullPolicy: IfNotPresent
+                  command: [--build --serve /var/opentripplanner]
+                  ports:
+                    - name: otp-8080
+                      containerPort: 8080
+                  volumeMounts:
+                    - name: var-opentripplanner
+                      mountPath: /var/opentripplanner
+            volumes:
+                - name: var-opentripplanner
+                  hostPath:
+                    path: C:\Users\Gab\OneDrive\Desktop\OTPP\otp-data

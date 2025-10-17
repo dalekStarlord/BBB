@@ -1,0 +1,18 @@
+#! otp-C:\Users\Gab\OneDrive\Desktop\OTPP\otp-data-persistentVolumeClaim.yaml
+# Generated code, do not edit
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+    name: otp-c--users-gab-onedrive-desktop-otpp-otp-data
+    namespace: otpp
+    labels:
+        com.docker.compose.service: otp
+        com.docker.compose.volume: C:\Users\Gab\OneDrive\Desktop\OTPP\otp-data
+spec:
+    accessModes:
+        # TODO would need to check which services use this volume
+        - ReadWriteOnce
+    volumeMode: Filesystem
+    resources:
+        requests:
+            storage: 100Mi

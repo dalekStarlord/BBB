@@ -1,0 +1,9 @@
+﻿services:
+  otp:
+    build: ./OpenTripPlanner
+    container_name: otp
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./otp-data:/var/opentripplanner
+    command: ["--build","--serve","/var/opentripplanner"]

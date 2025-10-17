@@ -1,0 +1,11 @@
+# check if there is at least one published port
+
+#! otp-service.yaml
+# Generated code, do not edit
+apiVersion: v1
+kind: Service
+metadata:
+    name: otp-published
+    namespace: otpp
+spec:
+    type: LoadBalancer

@@ -1,0 +1,9 @@
+#! otp-C:\Users\Gab\OneDrive\Desktop\OTPP\otp-data-persistentVolumeClaim.yaml
+# Generated code, do not edit
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+    name: otp-c--users-gab-onedrive-desktop-otpp-otp-data
+    namespace: otpp
+spec:
+    storageClassName: "hostpath" # see docker/desktop-storage-provisioner

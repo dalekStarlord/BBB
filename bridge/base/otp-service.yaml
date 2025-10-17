@@ -1,0 +1,21 @@
+# check if there is at least one published port
+
+#! otp-service.yaml
+# Generated code, do not edit
+apiVersion: v1
+kind: Service
+metadata:
+    name: otp-published
+    namespace: otpp
+    labels:
+        com.docker.compose.project: otpp
+        com.docker.compose.service: otp
+spec:
+    selector:
+        com.docker.compose.project: otpp
+        com.docker.compose.service: otp
+    ports:
+        - name: otp-8080
+          port: 8080
+          protocol: TCP
+          targetPort: otp-8080

@@ -1,0 +1,11 @@
+#! kustomization.yaml
+# Generated code, do not edit
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+    - 0-otpp-namespace.yaml
+    - default-network-policy.yaml
+    - otp-C:\Users\Gab\OneDrive\Desktop\OTPP\otp-data-persistentVolumeClaim.yaml
+    - otp-deployment.yaml
+    - otp-expose.yaml
+    - otp-service.yaml
